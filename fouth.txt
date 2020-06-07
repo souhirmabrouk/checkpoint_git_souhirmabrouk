@@ -1,1 +1,374 @@
-je me suis trompée dans l'écriture du nom:))
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again
+$ touch third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again
+$ git init
+Initialized empty Git repository in C:/Users/Asus/Desktop/learn_Git_Again/.git/
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global user.email "souhirmabrouk2017@gmail.com"
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global user.name " Souhir Mabrouk"
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git add third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ touch app.js
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git add app.js
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git rm--cached app.js
+git: 'rm--cached' is not a git command. See 'git --help'.
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git rm --cached app.js
+rm 'app.js'
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        app.js
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ touch fouth.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ add fouth.txt
+bash: add: command not found
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git add fouth.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   fouth.txt
+        new file:   third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        app.js
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git add .
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   fouth.txt
+        new file:   third.txt
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git rm --cached fouth.txt
+rm 'fouth.txt'
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fouth.txt
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git commit -m 'adding third.txt'
+[master (root-commit) 3bde3f7] adding third.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git log
+commit 3bde3f7fdee0a6df17084355b556f16b151728e1 (HEAD -> master)
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:25:45 2020 +0200
+
+    adding third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git add fouth.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   fouth.txt
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git commit -m 'adding fouth.txt'
+[master 4de3325] adding fouth.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fouth.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git log
+commit 4de3325a3ffc40cae827efd6b68525547fdc8675 (HEAD -> master)
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:30:54 2020 +0200
+
+    adding fouth.txt
+
+commit 3bde3f7fdee0a6df17084355b556f16b151728e1
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:25:45 2020 +0200
+
+    adding third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git rm --cached third.txt
+rm 'third.txt'
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git log
+commit 4de3325a3ffc40cae827efd6b68525547fdc8675 (HEAD -> master)
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:30:54 2020 +0200
+
+    adding fouth.txt
+
+commit 3bde3f7fdee0a6df17084355b556f16b151728e1
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:25:45 2020 +0200
+
+    adding third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git commit -m 'removing third.txt'
+[master 8e96d52] removing third.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global core.pager 'more'
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git log
+error: cannot spawn more: No such file or directory
+commit 8e96d529c83b5eecc8cb29279ba384321a00cc8f (HEAD -> master)
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:51:38 2020 +0200
+
+    removing third.txt
+
+commit 4de3325a3ffc40cae827efd6b68525547fdc8675
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:30:54 2020 +0200
+
+    adding fouth.txt
+
+commit 3bde3f7fdee0a6df17084355b556f16b151728e1
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:25:45 2020 +0200
+
+    adding third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global core.pager more
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git log
+error: cannot spawn more: No such file or directory
+commit 8e96d529c83b5eecc8cb29279ba384321a00cc8f (HEAD -> master)
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:51:38 2020 +0200
+
+    removing third.txt
+
+commit 4de3325a3ffc40cae827efd6b68525547fdc8675
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:30:54 2020 +0200
+
+    adding fouth.txt
+
+commit 3bde3f7fdee0a6df17084355b556f16b151728e1
+Author: Souhir Mabrouk <souhirmabrouk2017@gmail.com>
+Date:   Sun Jun 7 18:25:45 2020 +0200
+
+    adding third.txt
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global core.pager ''
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global core.pager cat
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global --l
+error: ambiguous option: l (could be --local or --list)
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ git config --global --list
+gui.recentrepo=C:/Users/Asus/Desktop/GoMyCode/web/level5
+user.email=souhirmabrouk2017@gmail.com
+user.name= Souhir Mabrouk
+core.pager=cat
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ ^C
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
+$ ^C
+
+Asus@Asus-PC MINGW64 ~/Desktop/learn_Git_Again (master)
